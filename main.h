@@ -38,7 +38,7 @@ struct _format
 typedef struct _format format_t;
 
 int _printf(const char *format, ...);
-int handle_print(const char *format, int *i,
+int handle_print(const char *_format, int *i,
 va_list args, char buffer[], int flags, int width, int precision, int size);
 
 /*** Functions to print characters and strings ***/
