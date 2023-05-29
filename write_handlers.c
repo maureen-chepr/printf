@@ -80,25 +80,25 @@ int write_number(int is_negative, int index, char buffer[],
  * @buffer: Buffer array
  * @flags: Find flags
  * @width: find width
- * @prec: Specify precision
+ * @pr: Specify precision
  * @length: String length
  * @padd: Pading character
  * @extra_c: Extra character
  * Return: Number of characters
  */
 int write_num(int index, char buffer[],
-	int flags, int width, int prec,
+	int flags, int width, int pr,
 	int length, char padd, char extra_c)
 {
 	int i, padd_start = 1;
 
-	if (prec == 0 && index == BUFFER_SIZE - 2 && buffer[index] == '0' && width == 0)
+	if (pr == 0 && index == BUFFER_SIZE - 2 && buffer[index] == '0' && width == 0)
 		return (0);
-	if (prec == 0 && index == BUFFER_SIZE - 2 && buffer[index] == '0')
+	if (pr == 0 && index == BUFFER_SIZE - 2 && buffer[index] == '0')
 		buffer[index] = padd = ' ';
-	if (prec > 0 && prec < length)
+	if (pr > 0 && pr < length)
 		padd = ' ';
-	while (prec > length)
+	while (pr > length)
 		buffer[--index] = '0', length++;
 	if (extra_c != 0)
 		length++;
