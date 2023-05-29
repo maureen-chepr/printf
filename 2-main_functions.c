@@ -44,9 +44,9 @@ int print_pointer(va_list types, char buffer[],
 	else if (flags & F_SPACE)
 		extra_c = ' ', length++;
 
-	ind++;
+	index++;
 
-	return (write_pointer(buffer, ind, length,
+	return (write_pointer(buffer, index, length,
 		width, flags, padd, extra_c, padd_start));
 }
 
