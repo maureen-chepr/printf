@@ -35,7 +35,7 @@ struct _format
  * @_format: Format specifier
  * @_format_t: Function associated
  */
-typedef struct _format format_t;
+typedef struct _format _format_t;
 
 int _printf(const char *format, ...);
 int handle_print(const char *_format, int *i,
