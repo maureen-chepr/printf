@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 				flags, width, precision, size);
 			if (result == -1)
 				return (-1);
-			result_chars += printed;
+			result_chars += result;
 		}
 	}
 
